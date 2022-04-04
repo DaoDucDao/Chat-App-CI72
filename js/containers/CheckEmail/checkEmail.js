@@ -1,9 +1,9 @@
 class CheckEmailScreen {
-	$mailContainer;
-	$btnMail;
-	constructor() {
-		this.$mailContainer = document.createElement('div');
-		this.$mailContainer.innerHTML = `
+  $mailContainer;
+  $btnMail;
+  constructor() {
+    this.$mailContainer = document.createElement("div");
+    this.$mailContainer.innerHTML = `
         <div class="forny-inner">
             <div class="d-flex flex-column align-items-center mail">
             <div class="col-12">
@@ -33,14 +33,14 @@ class CheckEmailScreen {
             </div>
         </div>
         `;
-	}
-	render(appEle) {
-		appEle.appendChild(this.$mainContainer);
+  }
+  render(appEle) {
+    appEle.appendChild(this.$mailContainer);
 
-		this.$btnMail = document.getElementById('open-gmail');
-		this.$btnMail.addEventListener('click', () => {
-			window.location.href = 'https://mail.google.com/mail/u/0/#inbox';
-		});
-	}
+    this.$btnMail = document.getElementById("open-gmail");
+    this.$btnMail.addEventListener("click", () => {
+      window.location.href = "https://mail.google.com/mail/u/0/#inbox";
+    });
+  }
 }
 export default CheckEmailScreen;
