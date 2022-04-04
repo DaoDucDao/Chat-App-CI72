@@ -1,3 +1,4 @@
+// <<<<<<< HEAD
 import ButtonComponent from '../../../components/button.js';
 import * as _noti from '../../../common/notify.js';
 import { sendMessage } from '../../../fireBase/store.js';
@@ -39,7 +40,14 @@ class Composer {
 			if (this.$activeConversation) {
 				const { value } = e.target.contentMsg;
 				const user = getCurrentUser();
-				await sendMessage(user.email, value, this.$activeConversation.id, '');
+				const info = JSON.parse(localStorage.getItem('auth-info'));
+				this.$inputMessage.value = '';
+				await sendMessage(
+					user.email,
+					value,
+					this.$activeConversation.id,
+					info.imageUrl || ''
+				);
 			}
 		} catch (error) {
 			_noti.error(error.code, error.message);
@@ -53,4 +61,3 @@ class Composer {
 }
 
 export default Composer;
-//28' left

@@ -2,6 +2,9 @@
 
 * {
 	font-family: 'Montserrat', sans-serif !important;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -10,17 +13,45 @@ body {
 	line-height: 1.6;
 	color: #212529;
 	text-align: left;
-	background-color: #f5f8fa;
+	height: 100%;
+	background-image: url('../images/background3.jpg');
+	animation: change 15s infinite ease-in-out;
+	background-size: cover;
+}
+
+@keyframes change {
+	30% {
+		background-image: url('../images/background1.jpg');
+	}
+	60% {
+		background-image: url('../images/background2.jpg');
+	}
+	90% {
+		background-image: url('../images/background3.jpg');
+		background-size: cover;
+	}
+}
+
+.div-container {
+	display: flex;
+	align-items: center;
+	margin: auto; /* this make the form center */
+	height: 500px;
+	width: 40%;
+	background-color: white;
+	padding: 100px 0px;
+	border-radius: 30px;
+	margin-top: 10%;
 }
 
 .form-container {
-	flex-grow: 1;
-	padding: 0px 30px;
+	padding: 30px;
 	display: flex;
-	width: 50%;
+	height: 100%;
 	justify-content: center;
 	flex-direction: column;
 	margin: auto; /* this make the form center */
+	background-color: white;
 }
 
 .big-title {
@@ -31,14 +62,60 @@ body {
 	font-weight: bold;
 }
 
-.form-control {
-	height: 60px;
-	border-radius: 10px;
+.text {
+	position: relative;
+	padding: 15px 0 0;
+	margin-top: 10px;
+	width: 100%;
 }
-.label-input {
-	line-height: 60px;
-	flex: auto;
-	width: 100px;
+.input {
+	font-family: inherit;
+	width: 100%;
+	border: 0;
+	border-bottom: 2px solid #9b9b9b;
+	outline: 0;
+	font-size: 1rem;
+	color: black;
+	padding: 7px 0;
+	background: transparent;
+	transition: border-color 0.2s;
+}
+.input::placeholder {
+	color: transparent;
+}
+.input:placeholder-shown ~ .label {
+	font-size: 0.9rem;
+	cursor: text;
+	top: 20px;
+}
+.label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 0.9rem;
+	color: #9b9b9b;
+}
+.input:focus {
+	padding-bottom: 6px;
+	font-weight: 700;
+	border-width: 3px;
+	border-image: linear-gradient(to right, #11998e, #38ef7d);
+	border-image-slice: 1;
+}
+.input:focus ~ .label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 0.9rem;
+	color: #11998e;
+	font-weight: 700;
+}
+/* reset input */
+.input:required,
+.input:invalid {
+	box-shadow: none;
 }
 
 .error {
@@ -140,23 +217,23 @@ body {
 	height: 30px;
 	text-align: center;
 	display: inline-block;
-	background-color: white;
+	background-color: linear-gradient(120deg, #6acde6 0%, #d5e9d7 100%);
 	border-radius: 100%;
-	color: #6acde6;
+	color: white;
 	cursor: pointer;
 	position: absolute;
 	top: 20px;
 	right: 10px;
 	line-height: 30px; /* if we set this attribute equal to the height, the text will be in the middle  */
-	font-size: 25px;
-	border: 1.5px solid rgb(16, 182, 24);
+	font-size: 30px;
+	border: 1.5px solid linear-gradient(120deg, #6acde6 0%, #d5e9d7 100%);
 	transition: all 0.25s ease-out;
 }
 
 .btn-create:hover {
-	border: 1.5px solid rgb(16, 182, 24);
-	background-color: #6acde6;
-	color: white;
+	border: 1.5px solid linear-gradient(120deg, #6acde6 0%, #d5e9d7 100%);
+	background-color: #947e50;
+	color: #6acde6;
 	transition: all 0.15s ease-in;
 }
 
@@ -387,4 +464,27 @@ body {
 	height: 25px;
 	border-radius: 100%;
 	border: 1px solid rgb(207, 207, 207);
+}
+
+.btn-logout {
+	background-color: white;
+	color: black;
+	justify-content: center;
+	border-radius: 15px;
+}
+
+.btn-logout:hover {
+	background-color: #947e50;
+	color: white;
+	justify-content: center;
+	border-radius: 15px;
+}
+
+.msg-item-right {
+	justify-content: flex-end;
+	text-align: right;
+	align-items: flex-end;
+}
+.bgPink {
+	background-color: #fbc2eb !important;
 }

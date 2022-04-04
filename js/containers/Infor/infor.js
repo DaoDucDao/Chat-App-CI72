@@ -153,6 +153,7 @@ class InfoScreen {
 			} else {
 				createUser(user.email, '', name.value, phone.value, imgURL.value);
 			}
+
 			const newMain = new MainScreen();
 			appContainer.changeActiveScreen(newMain);
 		} catch (error) {
