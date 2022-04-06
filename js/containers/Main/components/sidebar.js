@@ -9,8 +9,6 @@ import {
 } from "../../../fireBase/store.js";
 import db from "../../../fireBase/fireBase.js";
 import { getCurrentUser } from "../../../fireBase/authentication.js";
-import LoginScreen from "../../Login/login.js";
-import app from "../../../script.js";
 
 class sideBarComponent {
   $container;
@@ -269,11 +267,11 @@ class sideBarComponent {
   }
 
   handleLogOut = () => {
-    const login = new LoginScreen();
-    // const app = document.getElementById('app');
-    // app.innerHTML = '';
-    // app.appendChild(login.render());
-    app.changeActiveScreen(login);
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {})
+      .catch(() => {});
   };
 }
 export default sideBarComponent;
