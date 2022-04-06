@@ -9,7 +9,7 @@ export const checkEmail = (email) => {
 		return 'Email is Invalid!';
 	}
 	// return false;
-	return null;
+	return true;
 };
 export const checkPassword = (password) => {
 	if (!password || password.length === 0) {
@@ -20,7 +20,7 @@ export const checkPassword = (password) => {
 		return 'Password is not strong enough!!';
 	}
 	// return false;
-	return null;
+	return true;
 };
 
 export const checkPhone = (phone) => {
@@ -31,7 +31,7 @@ export const checkPhone = (phone) => {
 	if (!regex.test(phone)) {
 		return 'Invalid phone number!!';
 	}
-	return null; // ?
+	return false; // ?
 };
 
 export const checkName = (name) => {
@@ -41,5 +41,5 @@ export const checkName = (name) => {
 	if (name.length > 20) {
 		return 'Name can only contain 20 characters max!';
 	}
-	return null; // ?
+	return false; // ?
 };
