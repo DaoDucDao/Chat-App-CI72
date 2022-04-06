@@ -3,11 +3,6 @@ export const checkEmail = (email) => {
 		// return true;
 		return 'Email is required!';
 	}
-	const regex = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/gim;
-	if (regex.test(email)) {
-		// return true;
-		return 'Email is Invalid!';
-	}
 	// return false;
 	return null;
 };
