@@ -16,6 +16,7 @@ class sideBarComponent {
   $title;
   $buttonCreate;
   $buttonLogOut;
+  $imgSingOut;
   $modal;
 
   $listContainer;
@@ -49,7 +50,10 @@ class sideBarComponent {
 
     this.$buttonLogOut = document.createElement("button");
     this.$buttonLogOut.classList.add("btn-logout");
-    this.$buttonLogOut.innerHTML = "Log Out";
+    this.$imgSingOut = document.createElement("img");
+    this.$imgSingOut.setAttribute("src", "../../../images/sign_out.png");
+    this.$imgSingOut.setAttribute("style", "width: 20px; height: 20px");
+    this.$buttonLogOut.appendChild(this.$imgSingOut);
     this.$buttonLogOut.addEventListener("click", this.handleLogOut);
 
     this.renderModal();

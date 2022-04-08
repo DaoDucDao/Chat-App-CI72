@@ -27,6 +27,7 @@ class Composer {
       "btn",
       "btn-primary",
       "d-block",
+      "sendBtn",
     ]);
   }
 

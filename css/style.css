@@ -199,7 +199,7 @@ body {
   max-width: 300px;
   min-width: 220px;
   position: relative;
-  padding: 20px;
+  padding: 20px 20px 12px 20px;
   background-image: linear-gradient(120deg, #6acde6 0%, #d5e9d7 100%);
 }
 
@@ -281,7 +281,7 @@ body {
   align-items: center;
   cursor: pointer;
   border-radius: 10px;
-  border: 1px solid #ffffff50;
+  margin-bottom: 2%;
 }
 
 .cs-item:hover {
@@ -319,7 +319,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 20px;
   font-weight: 400px;
 }
 
@@ -340,6 +340,10 @@ body {
   position: relative;
   visibility: hidden;
   opacity: 0;
+}
+
+.sendBtn {
+  margin: 0px 10px 10px 0px;
 }
 
 .cs-item:hover .btn-show-more {
@@ -411,7 +415,6 @@ body {
 .composer-container {
   display: flex;
   padding-top: 20px;
-  /* padding-bottom: 12px; */
   height: 80px;
   width: 100%;
   position: relative;
@@ -422,13 +425,16 @@ body {
   border: none;
   outline: none;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.25rem;
   background-color: #e4d9d9ee;
+  margin: 0 10px 10px 10px;
 }
+
 .composer-container > input :focus-visible {
   border: none !important;
   outline: none;
 }
+
 .list-container {
   flex-direction: column;
   margin: 4px 8px;
@@ -470,14 +476,20 @@ body {
   background-color: white;
   color: black;
   justify-content: center;
-  border-radius: 15px;
+  border-radius: 50%;
+  width: 15%;
+  height: 6.5%;
+  margin-left: 40%;
+  margin-top: 10px;
 }
 
 .btn-logout:hover {
   background-color: #947e50;
   color: white;
   justify-content: center;
-  border-radius: 15px;
+  border-radius: 50%;
+  width: 15%;
+  height: 6.5%;
 }
 
 .msg-item-right {
