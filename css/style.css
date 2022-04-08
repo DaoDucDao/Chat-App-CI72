@@ -199,7 +199,7 @@ body {
   max-width: 300px;
   min-width: 220px;
   position: relative;
-  padding: 20px 20px 12px 20px;
+  padding: 20px;
   background-image: linear-gradient(120deg, #6acde6 0%, #d5e9d7 100%);
 }
 
@@ -476,20 +476,14 @@ body {
   background-color: white;
   color: black;
   justify-content: center;
-  border-radius: 50%;
-  width: 15%;
-  height: 6.5%;
-  margin-left: 40%;
-  margin-top: 10px;
+  border-radius: 50px;
+  margin-top: 20px;
 }
 
 .btn-logout:hover {
   background-color: #947e50;
   color: white;
   justify-content: center;
-  border-radius: 50%;
-  width: 15%;
-  height: 6.5%;
 }
 
 .msg-item-right {
